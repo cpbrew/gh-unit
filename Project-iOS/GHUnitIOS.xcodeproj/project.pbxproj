@@ -145,6 +145,26 @@
 		00CEA042156C2E0B00BA3276 /* GHUIImageViewControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CEA03F156C2E0B00BA3276 /* GHUIImageViewControl.h */; };
 		00CEA043156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA040156C2E0B00BA3276 /* GHUIImageViewControl.m */; };
 		00CEA044156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA040156C2E0B00BA3276 /* GHUIImageViewControl.m */; };
+		056B1E7D17D9248600914996 /* GTMNSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E7B17D9248600914996 /* GTMNSString+HTML.h */; };
+		056B1E7E17D9248600914996 /* GTMNSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E7B17D9248600914996 /* GTMNSString+HTML.h */; };
+		056B1E7F17D9248600914996 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E7C17D9248600914996 /* GTMNSString+HTML.m */; };
+		056B1E8017D9248600914996 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E7C17D9248600914996 /* GTMNSString+HTML.m */; };
+		056B1E8317D924B100914996 /* NSString+URLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8117D924B100914996 /* NSString+URLEncoding.h */; };
+		056B1E8417D924B100914996 /* NSString+URLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8117D924B100914996 /* NSString+URLEncoding.h */; };
+		056B1E8517D924B100914996 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8217D924B100914996 /* NSString+URLEncoding.m */; };
+		056B1E8617D924B100914996 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8217D924B100914996 /* NSString+URLEncoding.m */; };
+		056B1E8D17D924FE00914996 /* GHTest+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8717D924FE00914996 /* GHTest+JSON.h */; };
+		056B1E8E17D924FE00914996 /* GHTest+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8717D924FE00914996 /* GHTest+JSON.h */; };
+		056B1E8F17D924FE00914996 /* GHTest+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8817D924FE00914996 /* GHTest+JSON.m */; };
+		056B1E9017D924FE00914996 /* GHTest+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8817D924FE00914996 /* GHTest+JSON.m */; };
+		056B1E9117D924FE00914996 /* GHTestGroup+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8917D924FE00914996 /* GHTestGroup+JSON.h */; };
+		056B1E9217D924FE00914996 /* GHTestGroup+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8917D924FE00914996 /* GHTestGroup+JSON.h */; };
+		056B1E9317D924FE00914996 /* GHTestGroup+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8A17D924FE00914996 /* GHTestGroup+JSON.m */; };
+		056B1E9417D924FE00914996 /* GHTestGroup+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8A17D924FE00914996 /* GHTestGroup+JSON.m */; };
+		056B1E9517D924FE00914996 /* GHTestGroup+Reporting.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8B17D924FE00914996 /* GHTestGroup+Reporting.h */; };
+		056B1E9617D924FE00914996 /* GHTestGroup+Reporting.h in Headers */ = {isa = PBXBuildFile; fileRef = 056B1E8B17D924FE00914996 /* GHTestGroup+Reporting.h */; };
+		056B1E9717D924FE00914996 /* GHTestGroup+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8C17D924FE00914996 /* GHTestGroup+Reporting.m */; };
+		056B1E9817D924FE00914996 /* GHTestGroup+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B1E8C17D924FE00914996 /* GHTestGroup+Reporting.m */; };
 		42187C1815BF472300E702B6 /* GHUnitIOSTestViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 42187C1715BF472300E702B6 /* GHUnitIOSTestViewTest.m */; };
 		421C7B8F13F0AF1D00E21E74 /* GHUnitIOSTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 421C7B8D13F0AF1D00E21E74 /* GHUnitIOSTestView.h */; };
 		421C7B9013F0AF1D00E21E74 /* GHUnitIOSTestView.h in Headers */ = {isa = PBXBuildFile; fileRef = 421C7B8D13F0AF1D00E21E74 /* GHUnitIOSTestView.h */; };
@@ -278,6 +298,16 @@
 		00C979CE13BA8A5000FC285C /* GHUnitIPhoneAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIPhoneAppDelegate.m; sourceTree = "<group>"; };
 		00CEA03F156C2E0B00BA3276 /* GHUIImageViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUIImageViewControl.h; sourceTree = "<group>"; };
 		00CEA040156C2E0B00BA3276 /* GHUIImageViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUIImageViewControl.m; sourceTree = "<group>"; };
+		056B1E7B17D9248600914996 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		056B1E7C17D9248600914996 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		056B1E8117D924B100914996 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		056B1E8217D924B100914996 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		056B1E8717D924FE00914996 /* GHTest+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GHTest+JSON.h"; sourceTree = "<group>"; };
+		056B1E8817D924FE00914996 /* GHTest+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHTest+JSON.m"; sourceTree = "<group>"; };
+		056B1E8917D924FE00914996 /* GHTestGroup+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GHTestGroup+JSON.h"; sourceTree = "<group>"; };
+		056B1E8A17D924FE00914996 /* GHTestGroup+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHTestGroup+JSON.m"; sourceTree = "<group>"; };
+		056B1E8B17D924FE00914996 /* GHTestGroup+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GHTestGroup+Reporting.h"; sourceTree = "<group>"; };
+		056B1E8C17D924FE00914996 /* GHTestGroup+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHTestGroup+Reporting.m"; sourceTree = "<group>"; };
 		42187C1715BF472300E702B6 /* GHUnitIOSTestViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestViewTest.m; sourceTree = "<group>"; };
 		421C7B8D13F0AF1D00E21E74 /* GHUnitIOSTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHUnitIOSTestView.h; sourceTree = "<group>"; };
 		421C7B8E13F0AF1D00E21E74 /* GHUnitIOSTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestView.m; sourceTree = "<group>"; };
@@ -414,6 +444,12 @@
 		0041C62313BA7C9A0015FC22 /* GHTest */ = {
 			isa = PBXGroup;
 			children = (
+				056B1E8717D924FE00914996 /* GHTest+JSON.h */,
+				056B1E8817D924FE00914996 /* GHTest+JSON.m */,
+				056B1E8917D924FE00914996 /* GHTestGroup+JSON.h */,
+				056B1E8A17D924FE00914996 /* GHTestGroup+JSON.m */,
+				056B1E8B17D924FE00914996 /* GHTestGroup+Reporting.h */,
+				056B1E8C17D924FE00914996 /* GHTestGroup+Reporting.m */,
 				0041C62413BA7C9A0015FC22 /* GHTest+JUnitXML.h */,
 				0041C62513BA7C9A0015FC22 /* GHTest+JUnitXML.m */,
 				0041C62613BA7C9A0015FC22 /* GHTest.h */,
@@ -487,6 +523,8 @@
 		0097C44A13BA7EEC00D3BEF0 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				056B1E8117D924B100914996 /* NSString+URLEncoding.h */,
+				056B1E8217D924B100914996 /* NSString+URLEncoding.m */,
 				0097C45213BA7EEC00D3BEF0 /* GTM */,
 				0097C45913BA7EEC00D3BEF0 /* README.md */,
 			);
@@ -506,6 +544,8 @@
 		0097C45313BA7EEC00D3BEF0 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				056B1E7B17D9248600914996 /* GTMNSString+HTML.h */,
+				056B1E7C17D9248600914996 /* GTMNSString+HTML.m */,
 				0066A0BB13C51359006B7022 /* GTMNSString+XML.h */,
 				0066A0BC13C51359006B7022 /* GTMNSString+XML.m */,
 				0097C45413BA7EEC00D3BEF0 /* GTMObjC2Runtime.h */,
@@ -621,6 +661,11 @@
 				4228635814595D0400BF3ED2 /* GHImageDiffView.h in Headers */,
 				00CEA041156C2E0B00BA3276 /* GHUIImageViewControl.h in Headers */,
 				42A274AA16361D9500BA4C74 /* GHTestUtils.h in Headers */,
+				056B1E7D17D9248600914996 /* GTMNSString+HTML.h in Headers */,
+				056B1E8317D924B100914996 /* NSString+URLEncoding.h in Headers */,
+				056B1E8D17D924FE00914996 /* GHTest+JSON.h in Headers */,
+				056B1E9117D924FE00914996 /* GHTestGroup+JSON.h in Headers */,
+				056B1E9517D924FE00914996 /* GHTestGroup+Reporting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +704,11 @@
 				00CEA042156C2E0B00BA3276 /* GHUIImageViewControl.h in Headers */,
 				423AF3391460969000F04DC7 /* GHImageDiffView.h in Headers */,
 				42A274AB16361D9500BA4C74 /* GHTestUtils.h in Headers */,
+				056B1E7E17D9248600914996 /* GTMNSString+HTML.h in Headers */,
+				056B1E8417D924B100914996 /* NSString+URLEncoding.h in Headers */,
+				056B1E8E17D924FE00914996 /* GHTest+JSON.h in Headers */,
+				056B1E9217D924FE00914996 /* GHTestGroup+JSON.h in Headers */,
+				056B1E9617D924FE00914996 /* GHTestGroup+Reporting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +888,11 @@
 				4228635914595D0400BF3ED2 /* GHImageDiffView.m in Sources */,
 				00CEA043156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */,
 				42A274AC16361D9500BA4C74 /* GHTestUtils.m in Sources */,
+				056B1E7F17D9248600914996 /* GTMNSString+HTML.m in Sources */,
+				056B1E8517D924B100914996 /* NSString+URLEncoding.m in Sources */,
+				056B1E8F17D924FE00914996 /* GHTest+JSON.m in Sources */,
+				056B1E9317D924FE00914996 /* GHTestGroup+JSON.m in Sources */,
+				056B1E9717D924FE00914996 /* GHTestGroup+Reporting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +927,11 @@
 				00CEA044156C2E0B00BA3276 /* GHUIImageViewControl.m in Sources */,
 				423AF3371460965C00F04DC7 /* GHImageDiffView.m in Sources */,
 				42A274AD16361D9500BA4C74 /* GHTestUtils.m in Sources */,
+				056B1E8017D9248600914996 /* GTMNSString+HTML.m in Sources */,
+				056B1E8617D924B100914996 /* NSString+URLEncoding.m in Sources */,
+				056B1E9017D924FE00914996 /* GHTest+JSON.m in Sources */,
+				056B1E9417D924FE00914996 /* GHTestGroup+JSON.m in Sources */,
+				056B1E9817D924FE00914996 /* GHTestGroup+Reporting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,8 +35,6 @@
 
 - (NSString *)JUnitXML;
 
-- (BOOL)writeJUnitXMLAtPath:(NSString *)documentsPath error:(NSError **)error;
-
 @end
 
 //! @endcond

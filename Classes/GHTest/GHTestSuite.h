@@ -44,21 +44,21 @@ extern NSString *GHUnitTest;
  A test is a id<GHTest> which represents a target and a selector.
  A test group is a collection of tests; A collection of id<GHTest> (GHTest or GHTestGroup).
  
- For example, if you have 2 test cases, GHTestCase1 (with some test methods) and GHTestCase2 (with some test methods), 
+ For example, if you have 2 test cases, GHTestCase1 (with some test methods) and GHTestCase2 (with some test methods),
  your test suite might look like:
  
-"Tests" (GHTestSuite)
-  GHTestGroup (collection of tests from GHTestCase1)
-    - (void)testA1 (GHTest with target GHTestCase1 + testA1)
-    - (void)testA2 (GHTest with target GHTestCase1 + testA2)
-  GHTestGroup (collection of tests from GHTestCase2)
-    - (void)testB1; (GHTest with target GHTestCase2 + testB1)
-    - (void)testB2; (GHTest with target GHTestCase2 + testB2)  
+ "Tests" (GHTestSuite)
+ GHTestGroup (collection of tests from GHTestCase1)
+ - (void)testA1 (GHTest with target GHTestCase1 + testA1)
+ - (void)testA2 (GHTest with target GHTestCase1 + testA2)
+ GHTestGroup (collection of tests from GHTestCase2)
+ - (void)testB1; (GHTest with target GHTestCase2 + testB1)
+ - (void)testB2; (GHTest with target GHTestCase2 + testB2)
  
  */
 @interface GHTestSuite : GHTestGroup { }
 
-/*! 
+/*!
  Create test suite with test cases.
  @param name Label to give the suite
  @param testCases Array of init'ed test case classes
@@ -109,9 +109,13 @@ extern NSString *GHUnitTest;
 
 @end
 
-@interface GHTestSuite (JUnitXML)
+@interface GHTestSuite (Reporting)
 
 - (BOOL)writeJUnitXMLToDirectory:(NSString *)directory error:(NSError **)error;
+- (BOOL)writeJSONToDirectory:(NSString *)directory error:(NSError **)error;
+
+- (BOOL)writeJUnitXMLToURL:(NSURL *)url error:(NSError **)error;
+- (BOOL)writeJSONToURL:(NSURL *)url error:(NSError **)error;
 
 @end
 
