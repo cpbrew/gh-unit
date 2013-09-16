@@ -295,7 +295,7 @@ operationQueue=operationQueue_;
     char* resultsDestStr = getenv("RESULTS_URL");
     if (resultsDestStr) { // writing results to a url
         resultsDest = [NSString stringWithUTF8String:resultsDestStr];
-        resultsDest = [resultsDest stringByReplacingOccurrencesOfString:@"[DEVICE_ID]" withString:[[UIDevice currentDevice] uniqueIdentifier]];
+        resultsDest = [resultsDest stringByReplacingOccurrencesOfString:@"[DEVICE_ID]" withString:[[UIDevice currentDevice] identifierForVendor]];
         
         if (resultType == 1) { // JUNIT XML
             [self log:[NSString stringWithFormat:@"Writing JUnit XML to %@\n", resultsDest]];

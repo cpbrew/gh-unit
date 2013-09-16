@@ -10,26 +10,27 @@
 
 @implementation GHTestGroup (Reporting)
 
-- (BOOL)writeResults:(NSString *)results atPath:(NSString *)path error:(NSError **)error {
+- (BOOL)writeResults:(NSData *)results atPath:(NSString *)path error:(NSError **)error {
     if (self.stats.testCount > 0) {
         
         NSString *XMLPath = [path stringByAppendingPathComponent:
                              [NSString stringWithFormat:@"%@.xml", self.name]];
 
         // Attempt to write the XML and return the success status
-        return [results writeToFile:XMLPath atomically:NO encoding:NSUTF8StringEncoding error:error];
+//        return [results writeToFile:XMLPath atomically:NO error:error];
+        return [results writeToFile:XMLPath options:0 error:error];
     }
     return YES;
 }
 
-- (BOOL)writeResults:(NSString *)results ofType:(NSString *)type atURL:(NSURL *)url error:(NSError **)error {
+- (BOOL)writeResults:(NSData *)results ofType:(NSString *)type atURL:(NSURL *)url error:(NSError **)error {
     if (self.stats.testCount > 0) {
         
         NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
         [req setHTTPMethod:@"POST"];
         [req addValue:self.name forHTTPHeaderField:@"X-TEST-NAME"];
         [req addValue:type forHTTPHeaderField:@"Content-Type"];
-        [req setHTTPBody:[results dataUsingEncoding:NSUTF8StringEncoding]];
+        [req setHTTPBody:results];
         
         NSLog(@"Writing test results to %@", url);
         

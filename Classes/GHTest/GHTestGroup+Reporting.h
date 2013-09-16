@@ -15,7 +15,7 @@
 
 @interface GHTestGroup (Reporting)
 
-- (BOOL)writeResults:(NSString *)results atPath:(NSString *)path error:(NSError **)error;
-- (BOOL)writeResults:(NSString *)results ofType:(NSString *)type atURL:(NSURL *)url error:(NSError **)error;
+- (BOOL)writeResults:(NSData *)results atPath:(NSString *)path error:(NSError **)error;
+- (BOOL)writeResults:(NSData *)results ofType:(NSString *)type atURL:(NSURL *)url error:(NSError **)error;
 
 @end

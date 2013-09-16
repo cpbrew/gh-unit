@@ -10,6 +10,7 @@
 
 @interface GHTest(JSON)
 
-- (NSString *)JSON;
+//- (NSString *)JSON;
+- (id)JSON;
 
 @end

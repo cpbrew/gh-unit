@@ -151,11 +151,9 @@ NSString *GHUnitTest = NULL;
         }
     }
     
-    NSString *result;
     for (id child in self.children) {
         if ([child respondsToSelector:@selector(JUnitXML)] && [child respondsToSelector:@selector(writeResults:atPath:error:)]) {
-            result = [child JUnitXML];
-            if (![child writeResults:result atPath:directory error:error]) {
+            if (![child writeResults:[[child JUnitXML] dataUsingEncoding:NSUTF8StringEncoding] atPath:directory error:error]) {
                 NSLog(@"Error writing JUnit XML: %@", [*error localizedDescription]);
                 allSuccess = NO;
             }
@@ -176,11 +174,9 @@ NSString *GHUnitTest = NULL;
         }
     }
     
-    NSString *result;
     for (id child in self.children) {
         if ([child respondsToSelector:@selector(JSON)] && [child respondsToSelector:@selector(writeResults:atPath:error:)]) {
-            result = [child JSON];
-            if (![child writeResults:result atPath:directory error:error]) {
+            if (![child writeResults:[child JSON] atPath:directory error:error]) {
                 NSLog(@"Error writing JSON: %@", [*error localizedDescription]);
                 allSuccess = NO;
             }
@@ -193,11 +189,9 @@ NSString *GHUnitTest = NULL;
     NSParameterAssert(error);
     BOOL allSuccess = YES;
     
-    NSString *result;
     for (id child in self.children) {
         if ([child respondsToSelector:@selector(JUnitXML)] && [child respondsToSelector:@selector(writeResults:ofType:atURL:error:)]) {
-            result = [child JUnitXML];
-            if (![child writeResults:result ofType:CONTENT_TYPE_XML atURL:url error:error]) {
+            if (![child writeResults:[[child JUnitXML] dataUsingEncoding:NSUTF8StringEncoding] ofType:CONTENT_TYPE_XML atURL:url error:error]) {
                 NSLog(@"Error writing JUnit XML: %@", [*error localizedDescription]);
                 allSuccess = NO;
             }
@@ -212,8 +206,11 @@ NSString *GHUnitTest = NULL;
     
     for (id child in self.children) {
         if ([child respondsToSelector:@selector(JSON)] && [child respondsToSelector:@selector(writeResults:ofType:atURL:error:)]) {
-            NSString *result = [NSString stringWithFormat:@"testsuite=%@&result=%@", [child name], [[child JSON] urlEncodeUsingEncoding:NSUTF8StringEncoding]];
-            if (![child writeResults:result ofType:CONTENT_TYPE_JSON atURL:url error:error]) {
+            NSMutableDictionary *jsonDict = [NSMutableDictionary dictionary];
+            [jsonDict setObject:[child name] forKey:@"testsuite"];
+            [jsonDict setObject:[child JSON] forKey:@"result"];
+//            NSString *result = [NSString stringWithFormat:@"testsuite=%@&result=%@", [child name], [[child JSON] urlEncodeUsingEncoding:NSUTF8StringEncoding]];
+            if (![child writeResults:[NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:nil] ofType:CONTENT_TYPE_JSON atURL:url error:error]) {
                 NSLog(@"Error writing JSON: %@", [*error localizedDescription]);
                 allSuccess = NO;
             }
